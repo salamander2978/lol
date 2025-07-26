@@ -5,6 +5,7 @@ interface Player {
   role: string;
   hero: string;
   avatar: string;
+  steamLink: string;
   stats: {
     matches: number;
     winRate: number;
@@ -23,6 +24,7 @@ class DotaTeamApp {
       role: "Carry",
       hero: "Juggernaut",
       avatar: "👤",
+      steamLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       stats: { matches: 0, winRate: 0, avgKDA: 0 }
     },
     {
@@ -32,6 +34,7 @@ class DotaTeamApp {
       role: "Mid",
       hero: "Pudge",
       avatar: "👤",
+      steamLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       stats: { matches: 0, winRate: 0, avgKDA: 0 }
     },
     {
@@ -41,6 +44,7 @@ class DotaTeamApp {
       role: "Offlane",
       hero: "Legion Commander",
       avatar: "👤",
+      steamLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       stats: { matches: -1, winRate: -1, avgKDA: 0 }
     },
     {
@@ -50,6 +54,7 @@ class DotaTeamApp {
       role: "Support",
       hero: "Monkey King",
       avatar: "👤",
+      steamLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       stats: { matches: -2, winRate: -2, avgKDA: 0 }
     },
     {
@@ -59,6 +64,7 @@ class DotaTeamApp {
       role: "Hard Support",
       hero: "Undying",
       avatar: "👤",
+      steamLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       stats: { matches: -3, winRate: -3, avgKDA: 0 }
     }
   ];
@@ -150,6 +156,7 @@ class DotaTeamApp {
                 <p class="player-nickname">${player.nickname}</p>
                 <p class="player-role">${player.role}</p>
                 <p class="player-hero">Любимый герой: ${player.hero}</p>
+                ${player.steamLink ? `<a href="${player.steamLink}" target="_blank" class="steam-link">Steam профиль</a>` : ''}
               </div>
               <div class="player-stats">
                 <div class="stat-item">
